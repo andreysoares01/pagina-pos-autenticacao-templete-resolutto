@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectado à Internet</title>
+    <style>
+        /* ===================================================
+           🎨 PALETA DE CORES - PERSONALIZE AQUI
+        =================================================== */
+        :root {
+            --cor-principal: #0E3B9C;       /* Cor do botão e do ícone */
+            --cor-principal-hover: #0E3B9C; /* Cor do botão ao passar o mouse */
+            --cor-fundo-tela: #f8fafc;      /* Cor do fundo da página */
+            --cor-fundo-card: #ffffff;      /* Cor da caixa central */
+            --cor-texto-titulo: #1e293b;    /* Cor do título */
+            --cor-texto-corpo: #64748b;     /* Cor da mensagem */
+            --arredondamento: 16px;         /* Curvatura dos cantos (0 para quadrado) */
+        }
+
+        /* ===================================================
+           ESTILOS ESTRUTURAIS (Não precisa mexer)
+        =================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo-tela);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--cor-fundo-card);
+            padding: 40px 30px;
+            border-radius: var(--arredondamento);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .logo-container {
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-height: 100%;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(37, 99, 235, 0.1); /* 10% da cor principal */
+            color: var(--cor-principal);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .status-badge svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--cor-texto-titulo);
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--cor-texto-corpo);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .btn-navegar {
+            display: block;
+            background-color: var(--cor-principal);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: calc(var(--arredondamento) / 2);
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn-navegar:hover {
+            background-color: var(--cor-principal-hover);
+        }
+
+        .btn-navegar:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="logo-container">
+            <img src="LOGO_RESOLUTTO" alt="Logo" class="logo">
+        </div>
+        
+        <div class="status-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Conexão ativa
+        </div>
+
+        <h1>Seja bem-vindo à rede de visitantes</h1>
+        <p>Você está conectado à internet com segurança e já pode navegar.</p>
+
+        <a href="https://www.google.com" class="btn-navegar">Começar a Navegar</a>
+    </div>
+
+</body>
+</html>
